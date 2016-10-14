@@ -1,0 +1,88 @@
+
+body{
+    display: block;
+    background: url("images/city-background-1500.jpg") no-repeat;
+    color: white;
+    position: relative;
+    background-size: cover;
+    
+}
+
+/* Header */
+#header{
+    
+}
+
+#info-wrapper{
+   margin: 100px auto;
+    width: 75%;
+    
+   background-color: rgba(64,64,64);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+    border-radius: 25px;
+}
+#info-wrapper-overlay{
+  background-color: rgba(44,62,80 , 0.6 );
+	background-image: url('images/pattern.png');
+	background-position: center;
+	background-repeat: repeat;
+    border-radius: 25px;    
+    padding-bottom:20px;
+}
+/* Logo Text */
+#logo-text, #logo-subtext{
+    text-align: center;
+    font-family: 'Inknut Antiqua', serif;
+    
+}
+    #logo-text{
+    font-size: 48px;
+        margin-bottom: -10px;
+        margin-top: 10px;
+}
+#logo-subtext{
+     margin-top: 0px;
+}
+
+
+/* Coming Soon */
+#coming-soon-wrapper{
+    text-align:center;
+    font-family: 'Inknut Antiqua', serif;
+    
+}
+#coming-soon-text{
+    font-size:32px;
+    border-bottom-color: azure;
+    border-bottom-width: 1px;
+    border-bottom: solid;
+}
+/* Time Element Styles */
+#timer-wrapper{
+    text-align:center;
+}
+.time-element{
+    display: inline-block;
+    border-width: 10px;
+    border-color: azure;
+    border: solid;
+    border-radius: 50%;
+    width: 150px;
+    height: 120px;
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    margin-right:15px;
+    margin-top: 15px;
+    background-color: rgba(128,128,128,.3);
+    font-size: 25px;
+    color: white;
+}
+
+.time-element span{
+     font-size: 54px;
+    font-weight: bold;
+    text-align: center;
+}

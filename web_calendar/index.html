@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Date Picker Demo</title>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+  <script>
+      var dateField = 'date' + itemCounter;
+      var itemCounter = 1;
+ $( function() {
+    $( "#datepicker" ).datepicker({
+        gotoCurrent: true,
+     
+         onSelect: function(dateSelected,event) {
+          var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+             //Set selected pick date field
+             $("#date-list").append('<li id="date' + itemCounter + '">' + dateSelected + '</li>');
+             itemCounter++;
+                $('#viewDates').fadeIn(2000);
+             
+            /*     // Highlight current date
+                // Get all <a> that are descendants of td's with 
+             var monthDateElements = $('td[data-month= ' + event['currentMonth'] + '][data-year= ' + event['currentYear'] + ']').find('a');
+                $(monthDateElements).filter(function(){ return $(this).text() == event['currentMonth'] ;}).addClass('ui-state-highlight ui-state-active');
+            
+           console.log('monthDateElementsA',  $(monthDateElements).filter(function(){ return $(this).text() == event['currentMonth'] ;})); 
+             
+             
+           console.log('monthDateElements', monthDateElements); 
+             console.log('dateSelected', dateSelected); 
+             console.log('event', event); 
+             console.log('eventd', event['currentYear']);
+             console.log('this', $('a').filter(function(){ return $(this).text() == "2";})); */
+         }
+    });
+     
+     $(".formScreen").hide();
+     $("#page1-btn").click(
+        function(){
+            //hide div
+                $('#page1').hide();
+            //alert("hi");
+            //show next div
+                $('#page2').fadeIn(2000);
+            
+        }
+     ); $("#page2-btn").click(
+        function(){
+            //hide div
+                $('#page2').hide();
+            //alert("hi");
+            //show next div
+                $('#page3').fadeIn(2000);
+            
+        }
+     );
+    
+  } );
+      
+     
+  </script>
+    <style>
+        #page1, #page2, #page3{
+            border-width: thin;
+            border-style: solid;
+            padding: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid">
+     
+        <div class="row">
+            <div class="col-md-4"></div> 
+            <div class="col-md-4">
+            
+            
+    <div id="appBody" style="padding-top:15px;">
+    <div id="page1">
+     
+        <form>
+          <div class="form-group">
+            <label for="username">Name</label>
+            <input type="text" class="form-control" id="username" placeholder="Name">
+          </div>
+            <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          </div>
+          
+           <div class="form-group">
+               <label for="workshop">Select Workshop</label>
+            <select id="workshop" multiple class="form-control">
+               <option>Beginner Workshop</option>
+                <option>Intermediate Workshop</option>
+                <option>Advanced Workshop</option>
+            </select>
+            </div>
+            <a id="page1-btn" class="btn btn-success" href="#" role="button">Next</a>
+        
+        </form>
+
+          
+                     
+    </div>
+    <div id="page2" class="formScreen" style="display:hidden">
+        <div id="pick-dates">
+       <h2>Pick Your Dates:</h2>
+       <div id="datepicker"></div>
+    </div>
+    <div id="viewDates" style="display:hidden">
+       <h2>Your Selected Dates:</h2>
+       <ol id="date-list">
+        </ol>
+    </div>
+ 
+        
+            <!-- <a id="p1btn" class="btn btn-danger" href="#" role="button">PREV</a> -->
+            <a id="page2-btn" class="btn btn-success" href="#" role="button">SUBMIT</a>
+    
+    </div>
+    <div id="page3" class="formScreen" style="display:hidden; text-align:center">
+        <h1>Your Request Has Been Submitted</h1>
+    </div>
+    </div> <!-- APP BODY -->
+            
+            
+            
+            
+            
+            
+            </div> 
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
